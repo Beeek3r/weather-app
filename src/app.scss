@@ -1,0 +1,291 @@
+// Colours
+$primaryDark: #487eb1;
+$primaryLight: #709bc4;
+$greyLight: #adadad;
+$greyDark: #8a8787;
+
+// Font
+$primaryTypography: 'Raleway', sans-serif;
+$secondaryTypography: 'ABeeZee', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.App {
+  text-align: center;
+}
+
+.Container {
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  width: 90%;
+
+  @media screen and (min-width: 768px) {
+    width: 80%;
+  }
+}
+
+.Header-Wrapper {
+  width: 90%; /* Responsive TODO */
+  margin: auto;
+  .Header {
+    .Heading {
+      color: #487eb1;
+      font-family: 'Alfa Slab One', cursive; // Heading font
+      font-size: 1.8rem; /* Responsive TODO */
+      font-weight: 500;
+
+      @media screen and (min-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .Slogan {
+      color: $greyLight;
+      font-family: $secondaryTypography;
+      font-size: 0.95rem; /* Responsive TODO */
+    }
+  }
+}
+
+.Search-Wrapper {
+  width: 100%;
+  margin: auto;
+  margin-top: 4rem;
+
+  .Search-Form {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #Search-Input {
+    flex: 3;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    border-radius: 20px;
+    border: 1.5px solid $primaryDark;
+    font-family: $secondaryTypography;
+  }
+
+  .Search-Submit {
+    flex: 1;
+    color: #fff;
+    margin-left: 5px;
+    border-radius: 20px;
+    padding: 0.4rem;
+    background-color: $primaryDark;
+    border: 1.5px solid $primaryDark;
+    font-family: $secondaryTypography;
+
+    &:hover {
+      cursor: pointer;
+      border: 1.5px solid $primaryLight;
+      background: $primaryLight;
+    }
+  }
+}
+
+.Weather-Block-Wrapper {
+  width: 100%;
+  margin: auto;
+  margin-top: 4rem;
+  min-height: 30vh; // Minimum height for the main block
+  font-size: 0.9rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1rem;
+  }
+
+  .Weather-Location {
+    font-family: $primaryTypography;
+    color: $primaryDark;
+    font-weight: 600;
+    font-size: 1.1rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .Weather-Statistics-Names {
+    font-family: $primaryTypography;
+    color: $greyDark;
+    font-weight: 500;
+    font-size: 0.8rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .Weather-Statistics-Stats {
+    color: $primaryDark;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  // Toggling between current and forecast views
+  .View-Toggler-Wrapper {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+
+    // CURRENT & FORECAST BUTTON
+    .View-Toggler-Button {
+      margin: auto 5px;
+      padding: 5px 8px;
+      border: 1px solid #000;
+      outline: 0;
+      background: #fff;
+      color: #000;
+      font-family: $secondaryTypography;
+
+      &:hover {
+        background: $primaryDark;
+        border: 1px solid $primaryDark;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+
+    .View-Toggler-Button-Selected {
+      color: #fff;
+      background: $primaryDark;
+      border: 1px solid $primaryDark;
+    }
+  }
+}
+
+.Footer-Wrapper {
+  width: 100%;
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    text-decoration: none;
+    color: $greyDark;
+    font-size: 1.1rem;
+    font-family: $primaryTypography;
+    font-weight: 600;
+
+    &:hover {
+      color: $primaryDark;
+      cursor: pointer;
+    }
+  }
+
+  .Footer-Heading {
+    text-align: center;
+  }
+}
+
+.Weather-Forecast-Block-Wrapper {
+  width: 100%;
+  justify-content: center;
+  margin: auto 10px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  .Weather-Forcast-Table {
+    width: 100%;
+    margin: 2rem auto auto auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-collapse: collapse;
+    font-family: $primaryTypography;
+    font-size: 0.8rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 0.9rem;
+      width: 60%;
+    }
+
+    @media screen and (min-width: 992px) {
+      width: 40%;
+    }
+
+    .Weather-Forecast-Row-Header {
+      background: $primaryLight;
+    }
+
+    .Weather-Forecast-Row-Date {
+      color: #fff;
+      padding: 10px;
+    }
+
+    .Weather-Forecast-TD-Info {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .Weather-Forecast-TD-Icon {
+      width: 2.5rem;
+    }
+  }
+}
+
+.Modal {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  right: 20%;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+
+  .Modal-Heading {
+    font-family: 'Alfa Slab One', cursive;
+    color: $primaryDark;
+    font-size: 2rem;
+  }
+
+  .Modal-Text {
+    font-family: $primaryTypography;
+    margin-top: 2rem;
+  }
+
+  .Modal-Close {
+    margin-top: 1.75rem;
+    padding: 5px 8px;
+    border: 1px solid #000;
+    outline: 0;
+    background: #fff;
+    color: #000;
+    font-family: $primaryTypography;
+
+    &:hover {
+      background: $primaryLight;
+      cursor: pointer;
+      color: #fff;
+    }
+  }
+}
