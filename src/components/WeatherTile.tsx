@@ -3,7 +3,7 @@ import { GlobalContext } from './context/GlobalContext';
 
 const WeatherTile: React.FC = () => {
   // Context & Data destructing
-  const { state, dispatch } = useContext(GlobalContext);
+  const { state } = useContext(GlobalContext);
   const { temp, feels_like, temp_min, temp_max, pressure, humidity } = state.weatherData.main;
   const { icon } = state.weatherData.weather[0];
   const { name: location } = state.weatherData; // name: location is using renaming the destructed name to locaion

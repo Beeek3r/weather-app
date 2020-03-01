@@ -15,14 +15,14 @@ function ViewToggler() {
   return (
     <div className="View-Toggler-Wrapper">
       <button
-        className={`View-Toggler-Button ${state.view == 'current' && 'View-Toggler-Button-Selected'}`}
+        className={`View-Toggler-Button ${state.view === 'current' && 'View-Toggler-Button-Selected'}`}
         onClick={() => {
           handleViewChange('current');
         }}>
         CURRENT
       </button>
       <button
-        className={`View-Toggler-Button ${state.view == 'forecast' && 'View-Toggler-Button-Selected'}`}
+        className={`View-Toggler-Button ${state.view === 'forecast' && 'View-Toggler-Button-Selected'}`}
         onClick={() => {
           handleViewChange('forecast');
         }}>

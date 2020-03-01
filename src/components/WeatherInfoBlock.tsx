@@ -8,7 +8,7 @@ import Loader from 'react-loader-spinner';
 
 const WeatherInfoBlock = () => {
   // Context
-  const { state, dispatch } = useContext(GlobalContext);
+  const { state } = useContext(GlobalContext);
   // JSX
   return (
     <div className="Weather-Block-Wrapper">

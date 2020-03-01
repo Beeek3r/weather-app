@@ -3,14 +3,13 @@ import './app.scss';
 import Header from './components/Header';
 import Search from './components/Search';
 import WeatherInfoBlock from './components/WeatherInfoBlock';
-import axios from 'axios';
 import { GlobalContext } from './components/context/GlobalContext';
 import Footer from './components/Footer';
 import { weather } from './components/context/actions';
 
 const App: React.FC = () => {
   // Context
-  const { state, dispatch } = useContext(GlobalContext);
+  const { dispatch } = useContext(GlobalContext);
 
   // Hooks
   useEffect(() => {

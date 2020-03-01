@@ -4,7 +4,7 @@ import { weather } from './context/actions';
 
 const Search = () => {
   // Context & Component State
-  const { state, dispatch } = useContext(GlobalContext);
+  const { dispatch } = useContext(GlobalContext);
   const [query, setQuery] = useState('');
 
   const handleSubmit = async (event: FormEvent): Promise<void> => {
