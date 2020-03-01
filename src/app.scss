@@ -220,6 +220,7 @@ body {
     border-collapse: collapse;
     font-family: $primaryTypography;
     font-size: 0.8rem;
+    color: #fff;
 
     @media screen and (min-width: 768px) {
       font-size: 0.9rem;
@@ -231,7 +232,7 @@ body {
     }
 
     .Weather-Forecast-Row-Header {
-      background: $primaryLight;
+      background: $primaryDark;
     }
 
     .Weather-Forecast-Row-Date {
@@ -239,8 +240,20 @@ body {
       padding: 10px;
     }
 
-    .Weather-Forecast-TD-Info {
+    .Weather-Forecast-TD {
       border-bottom: 1px solid #ddd;
+      background: #728392;
+    }
+
+    // Used for temp, wind & cloud icons
+    .Weather-Forecast-TD-Weather-Icon {
+      text-align: right;
+    }
+
+    // Used for the
+    .Weather-Forecast-TD-Weather-Value {
+      text-align: left;
+      padding-left: 0.3rem;
     }
 
     .Weather-Forecast-TD-Icon {

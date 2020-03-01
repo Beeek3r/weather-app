@@ -29,43 +29,51 @@ const WeatherForcastBlock = () => {
             return (
               <Fragment>
                 <tr className="Weather-Forecast-Row-Header">
-                  <th colSpan={5} className="Weather-Forecast-Row-Date">
+                  <th colSpan={8} className="Weather-Forecast-Row-Date">
                     {localDateTime}
                   </th>
                 </tr>
                 <tr>
-                  <td className="Weather-Forecast-TD-Info">{localTime}</td>
-                  <td className="Weather-Forecast-TD-Info">
+                  <td className="Weather-Forecast-TD">{localTime}</td>
+                  <td className="Weather-Forecast-TD">
                     <img className="Weather-Forecast-TD-Icon" src={`http://openweathermap.org/img/wn/${forcastItem.weather[0].icon}@2x.png`} />
                   </td>
-                  <td className="Weather-Forecast-TD-Info">
-                    <i className="fas fa-temperature-low fa-lg" /> {Math.round(forcastItem.main.temp)}&#176;C
+                  <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Icon">
+                    <i className="fas fa-temperature-low fa-lg" />
                   </td>
-                  <td className="Weather-Forecast-TD-Info Weather-Forecast-TD-Stats-Icon">
-                    <i className="fas fa-wind fa-lg" /> {Math.round(forcastItem.wind.speed)}m/s
+                  <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Value ">{Math.round(forcastItem.main.temp)}&#176;C</td>
+                  <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Icon">
+                    <i className="fas fa-wind fa-lg" />
                   </td>
-                  <td className="Weather-Forecast-TD-Info">
-                    <i className="fas fa-cloud fa-lg" /> {forcastItem.clouds.all}%
+                  <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Value ">{Math.round(forcastItem.wind.speed)}m/s</td>
+
+                  <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Icon">
+                    <i className="fas fa-cloud fa-lg" />
                   </td>
+                  <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Value ">{forcastItem.clouds.all}%</td>
                 </tr>
               </Fragment>
             );
           } else {
             return (
               <tr>
-                <td className="Weather-Forecast-TD-Info">{localTime}</td>
-                <td className="Weather-Forecast-TD-Info">
+                <td className="Weather-Forecast-TD">{localTime}</td>
+                <td className="Weather-Forecast-TD">
                   <img className="Weather-Forecast-TD-Icon" src={`http://openweathermap.org/img/wn/${forcastItem.weather[0].icon}@2x.png`} />
                 </td>
-                <td className="Weather-Forecast-TD-Info">
-                  <i className="fas fa-temperature-low fa-lg" /> {Math.round(forcastItem.main.temp)}&#176;C
+                <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Icon">
+                  <i className="fas fa-temperature-low fa-lg" />
                 </td>
-                <td className="Weather-Forecast-TD-Info Weather-Forecast-TD-Stats-Icon">
-                  <i className="fas fa-wind fa-lg" /> {Math.round(forcastItem.wind.speed)}m/s
+                <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Value ">{Math.round(forcastItem.main.temp)}&#176;C</td>
+                <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Icon">
+                  <i className="fas fa-wind fa-lg" />
                 </td>
-                <td className="Weather-Forecast-TD-Info">
-                  <i className="fas fa-cloud fa-lg" /> {forcastItem.clouds.all}%
+                <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Value ">{Math.round(forcastItem.wind.speed)}m/s</td>
+
+                <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Icon">
+                  <i className="fas fa-cloud fa-lg" />
                 </td>
+                <td className="Weather-Forecast-TD Weather-Forecast-TD-Weather-Value ">{forcastItem.clouds.all}%</td>
               </tr>
             );
           }

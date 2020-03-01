@@ -28,7 +28,7 @@ const WeatherTile: React.FC = () => {
         Maximum Temperature: <span className="Weather-Statistics-Stats">{Math.round(temp_max)}&#176;C</span>
       </p>
       <p className="Weather-Statistics-Names">
-        Humdiity: <span className="Weather-Statistics-Stats">{humidity}%</span>
+        Humidity: <span className="Weather-Statistics-Stats">{humidity}%</span>
       </p>
       <p className="Weather-Statistics-Names">
         Atmospheric preassure: <span className="Weather-Statistics-Stats">{pressure}</span>
