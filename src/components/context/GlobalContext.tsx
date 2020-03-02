@@ -12,6 +12,7 @@ export interface IState {
     latitude: number;
   } | null;
   forcast: [];
+  error: null | string;
 }
 
 export interface IAction {
@@ -26,7 +27,8 @@ export const initialState: IState = {
   weatherData: null,
   coords: null,
   view: 'current',
-  forcast: []
+  forcast: [],
+  error: null
 };
 
 // Create Context
@@ -49,6 +51,9 @@ export const globalReducer = (state: IState, action: IAction) => {
 
     case 'FETCH_WEATHER_FORCAST':
       return { ...state, forcast: action.payload };
+
+    case 'SET_ERROR':
+      return { ...state, error: action.payload };
 
     default:
       return state;

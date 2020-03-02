@@ -98,6 +98,12 @@ body {
       background: $primaryLight;
     }
   }
+
+  .Search-Error-Message {
+    margin-top: 0.65rem;
+    font-family: 'ABeeZee', sans-serif;
+    color: red;
+  }
 }
 
 .Weather-Block-Wrapper {
@@ -220,7 +226,6 @@ body {
     border-collapse: collapse;
     font-family: $primaryTypography;
     font-size: 0.8rem;
-    color: #fff;
 
     @media screen and (min-width: 768px) {
       font-size: 0.9rem;
@@ -242,7 +247,6 @@ body {
 
     .Weather-Forecast-TD {
       border-bottom: 1px solid #ddd;
-      background: #728392;
     }
 
     // Used for temp, wind & cloud icons

@@ -4,12 +4,13 @@ import { weather } from './context/actions';
 
 const Search = () => {
   // Context & Component State
-  const { dispatch } = useContext(GlobalContext);
+  const { state, dispatch } = useContext(GlobalContext);
   const [query, setQuery] = useState('');
 
   const handleSubmit = async (event: FormEvent): Promise<void> => {
     event.preventDefault();
     dispatch({ type: 'SET_LOADING', payload: true });
+    dispatch({ type: 'SET_ERROR', payload: null });
 
     // Fetch current weather
     await weather
@@ -28,8 +29,9 @@ const Search = () => {
         dispatch({ type: 'FETCH_WEATHER_FORCAST', payload: weatherData });
         dispatch({ type: 'SET_LOADING', payload: false });
       })
-      .catch(xxx => {
+      .catch(error => {
         dispatch({ type: 'SET_LOADING', payload: false });
+        dispatch({ type: 'SET_ERROR', payload: 'City not found. Please enter another one or check for typing errors.' });
       });
   };
 
@@ -56,6 +58,11 @@ const Search = () => {
           Search
         </button>
       </form>
+      {state.error && (
+        <div className="Search-Error-Message">
+          <i className="fas fa-exclamation-triangle" /> {state.error}
+        </div>
+      )}
     </div>
   );
 };
