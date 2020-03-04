@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import './index.scss';
 
 const Footer = () => {
   const [modalIsOpen, setIsOpen] = React.useState(false);

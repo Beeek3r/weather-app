@@ -1,0 +1,50 @@
+@import '../utilities/variables.scss';
+
+.Search-Wrapper {
+  width: 100%;
+  margin: auto;
+  margin-top: 4rem;
+
+  .Search-Form {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  #Search-Input {
+    flex: 3;
+    padding: 0.4rem;
+    padding-left: 1rem;
+    border-radius: 20px;
+    border: 1.5px solid $primaryDark;
+    font-family: $secondaryTypography;
+  }
+
+  .Search-Submit {
+    flex: 1;
+    color: #fff;
+    margin-left: 5px;
+    border-radius: 20px;
+    padding: 0.4rem;
+    background-color: $primaryDark;
+    border: 1.5px solid $primaryDark;
+    font-family: $secondaryTypography;
+
+    &:hover {
+      cursor: pointer;
+      border: 1.5px solid $primaryLight;
+      background: $primaryLight;
+    }
+  }
+
+  .Search-Error-Message {
+    margin-top: 0.65rem;
+    font-family: 'ABeeZee', sans-serif;
+    color: red;
+    font-size: 0.9rem;
+  }
+}

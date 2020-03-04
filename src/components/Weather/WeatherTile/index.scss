@@ -1,0 +1,33 @@
+@import '../../utilities/variables.scss';
+
+.Weather-Location {
+  font-family: $primaryTypography;
+  color: $primaryDark;
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.3rem;
+  }
+}
+
+.Weather-Statistics-Names {
+  font-family: $primaryTypography;
+  color: $greyDark;
+  font-weight: 500;
+  font-size: 0.8rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.Weather-Statistics-Stats {
+  color: $primaryDark;
+  font-weight: 600;
+  font-size: 0.8rem;
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+}

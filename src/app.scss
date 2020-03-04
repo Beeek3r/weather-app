@@ -35,78 +35,6 @@ body {
   }
 }
 
-.Header-Wrapper {
-  width: 90%; /* Responsive TODO */
-  margin: auto;
-  .Header {
-    .Heading {
-      color: #487eb1;
-      font-family: 'Alfa Slab One', cursive; // Heading font
-      font-size: 1.8rem; /* Responsive TODO */
-      font-weight: 500;
-
-      @media screen and (min-width: 768px) {
-        font-size: 2.5rem;
-      }
-    }
-
-    .Slogan {
-      color: $greyLight;
-      font-family: $secondaryTypography;
-      font-size: 0.95rem; /* Responsive TODO */
-    }
-  }
-}
-
-.Search-Wrapper {
-  width: 100%;
-  margin: auto;
-  margin-top: 4rem;
-
-  .Search-Form {
-    display: flex;
-    justify-content: center;
-
-    @media screen and (min-width: 768px) {
-      width: 50%;
-      margin: auto;
-    }
-  }
-
-  #Search-Input {
-    flex: 3;
-    padding: 0.4rem;
-    padding-left: 1rem;
-    border-radius: 20px;
-    border: 1.5px solid $primaryDark;
-    font-family: $secondaryTypography;
-  }
-
-  .Search-Submit {
-    flex: 1;
-    color: #fff;
-    margin-left: 5px;
-    border-radius: 20px;
-    padding: 0.4rem;
-    background-color: $primaryDark;
-    border: 1.5px solid $primaryDark;
-    font-family: $secondaryTypography;
-
-    &:hover {
-      cursor: pointer;
-      border: 1.5px solid $primaryLight;
-      background: $primaryLight;
-    }
-  }
-
-  .Search-Error-Message {
-    margin-top: 0.65rem;
-    font-family: 'ABeeZee', sans-serif;
-    color: red;
-    font-size: 0.9rem;
-  }
-}
-
 .Weather-Block-Wrapper {
   width: 100%;
   margin: auto;
@@ -118,37 +46,37 @@ body {
     font-size: 1rem;
   }
 
-  .Weather-Location {
-    font-family: $primaryTypography;
-    color: $primaryDark;
-    font-weight: 600;
-    font-size: 1.1rem;
+  // .Weather-Location {
+  //   font-family: $primaryTypography;
+  //   color: $primaryDark;
+  //   font-weight: 600;
+  //   font-size: 1.1rem;
 
-    @media screen and (min-width: 768px) {
-      font-size: 1.3rem;
-    }
-  }
+  //   @media screen and (min-width: 768px) {
+  //     font-size: 1.3rem;
+  //   }
+  // }
 
-  .Weather-Statistics-Names {
-    font-family: $primaryTypography;
-    color: $greyDark;
-    font-weight: 500;
-    font-size: 0.8rem;
+  // .Weather-Statistics-Names {
+  //   font-family: $primaryTypography;
+  //   color: $greyDark;
+  //   font-weight: 500;
+  //   font-size: 0.8rem;
 
-    @media screen and (min-width: 768px) {
-      font-size: 1.2rem;
-    }
-  }
+  //   @media screen and (min-width: 768px) {
+  //     font-size: 1.2rem;
+  //   }
+  // }
 
-  .Weather-Statistics-Stats {
-    color: $primaryDark;
-    font-weight: 600;
-    font-size: 0.8rem;
+  // .Weather-Statistics-Stats {
+  //   color: $primaryDark;
+  //   font-weight: 600;
+  //   font-size: 0.8rem;
 
-    @media screen and (min-width: 768px) {
-      font-size: 1.2rem;
-    }
-  }
+  //   @media screen and (min-width: 768px) {
+  //     font-size: 1.2rem;
+  //   }
+  // }
 
   // Toggling between current and forecast views
   .View-Toggler-Wrapper {
@@ -182,31 +110,6 @@ body {
       background: $primaryDark;
       border: 1px solid $primaryDark;
     }
-  }
-}
-
-.Footer-Wrapper {
-  width: 100%;
-  margin: auto;
-  margin-top: 3rem;
-  display: flex;
-  justify-content: space-between;
-
-  a {
-    text-decoration: none;
-    color: $greyDark;
-    font-size: 1.1rem;
-    font-family: $primaryTypography;
-    font-weight: 600;
-
-    &:hover {
-      color: $primaryDark;
-      cursor: pointer;
-    }
-  }
-
-  .Footer-Heading {
-    text-align: center;
   }
 }
 

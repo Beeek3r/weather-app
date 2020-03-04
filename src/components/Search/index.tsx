@@ -1,6 +1,7 @@
 import React, { useContext, FormEvent, useState } from 'react';
-import { GlobalContext } from './context/GlobalContext';
-import { weather } from './context/actions';
+import { GlobalContext } from '../context/GlobalContext';
+import { weather } from '../context/actions';
+import './index.scss';
 
 const Search = () => {
   // Context & Component State

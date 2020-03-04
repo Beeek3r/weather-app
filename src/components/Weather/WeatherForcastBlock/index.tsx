@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { GlobalContext } from './context/GlobalContext';
+import { GlobalContext } from '../../context/GlobalContext';
 import moment from 'moment';
 
 // CONDITIONAL RENDER THIS BECAUSE SYS
